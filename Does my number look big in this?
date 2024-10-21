@@ -1,0 +1,9 @@
+function narcissistic(value) {
+    const stringValue = value.toString();
+    const numeroDigitos = stringValue.length;
+
+    const sum = stringValue.split('').reduce((acc, digit) => {
+        return acc + Math.pow(Number(digit), numeroDigitos);
+    }, 0);
+    return sum === value;
+}
