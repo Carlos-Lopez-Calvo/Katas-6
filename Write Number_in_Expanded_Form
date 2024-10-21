@@ -1,0 +1,15 @@
+public class Kata{
+    public static String expandedForm(int num){
+      char[] numeros = String.valueOf(num).toCharArray();    
+      StringBuilder resultado = new StringBuilder();               
+        for(int i = 0; i < numeros.length; i++) {
+          if(numeros[i]=='0') continue;
+          resultado.append(numeros[i]);
+        for (int x = 0; x < numeros.length - i - 1; x++)
+          resultado.append("0");                        
+          resultado.append(" + ");
+      }
+      resultado.setLength(sb.length()-3);
+      return resultado.toString();
+    }
+}
