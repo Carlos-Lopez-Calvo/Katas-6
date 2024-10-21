@@ -1,0 +1,14 @@
+function minValue(arr, n) {
+    const resultado = [];
+    
+    for (let i = 0; i <= arr.length - n; i++) {
+        const adjacentElements = arr.slice(i, i + n);
+        // Find the minimum of the adjacent elements
+        const minValue = Math.min(...adjacentElements);
+        // Push the minimum value to the result array
+        resultado.push(minValue);
+    }
+    
+    return resultado;
+}
+
