@@ -1,0 +1,21 @@
+public class BitCounting {
+
+	public static int countBits(int n) {
+        if (n < 0) {
+            return 0;
+        }
+
+
+        String binario = Integer.toBinaryString(n);
+
+        int contador = 0;
+        for (int i = 0; i < binario.length(); i++) {
+            if (binario.charAt(i) == '1') {
+                contador++;
+            }
+        }
+
+        return contador;
+    }
+	
+}
